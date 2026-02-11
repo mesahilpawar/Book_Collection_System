@@ -1,6 +1,6 @@
 # BookShelf – Books Manager
 
-A simple, modern **book inventory management** app built with Vite, React, TypeScript, Tailwind CSS, and shadcn-ui.
+A simple, modern **book inventory management** app built with Vite, React, Javascript Bootstrap CSS
 
 You can use it to:
 
@@ -117,7 +117,7 @@ Routing is handled with `react-router-dom` in `src/App.tsx`:
 
 There is no real backend; instead, the app uses an **in-memory array** as a fake database:
 
-- Defined in `src/services/bookService.ts`
+- Defined in `src/services/bookService.js`
 - Exposes functions such as:
   - `getBooks()`
   - `getBookById(id)`
@@ -131,7 +131,7 @@ These functions return Promises to mimic asynchronous API calls. Data is reset w
 
 Book forms are implemented in:
 
-- `src/components/BookForm.tsx`
+- `src/components/BookForm.jsx`
 - Validation schema in `src/lib/bookSchema.ts` using **zod**
 - `react-hook-form` is used to manage form state
 
@@ -146,7 +146,7 @@ Validation errors are shown inline under each field.
 
 ### 4.4 Book list & pagination
 
-The main list page (`src/pages/Index.tsx`) uses:
+The main list page (`src/pages/Index.jsx`) uses:
 
 - A table (shadcn-ui) to display books
 - Client-side pagination (page size: 5 items)
@@ -178,20 +178,20 @@ books-manager/
     components/
       BookForm.tsx
       layout/
-      ui/           # shadcn-ui components (buttons, inputs, dialogs, etc.)
+      
     lib/
       bookSchema.ts # zod schema & types for the book form
     pages/
-      Index.tsx     # list & pagination
-      BookDetails.tsx
-      AddBook.tsx
-      EditBook.tsx
-      NotFound.tsx
+      Index.jsx     # list & pagination
+      BookDetails.jsx
+      AddBook.jsx
+      EditBook.jsx
+      NotFound.jsx
     services/
-      bookService.ts # in-memory "API" for books
-    App.tsx
-    main.tsx
-  vite.config.ts
+      bookService.js # in-memory "API" for books
+    App.jsx
+    main.jsx
+  vite.config.js
   package.json
   README.md
 ```
@@ -245,7 +245,7 @@ Some ideas for extending this project:
 ## 8. Troubleshooting
 
 - **Port already in use (3000)**  
-  Another process is using port 3000. Stop it or change the port in `vite.config.ts`.
+  Another process is using port 3000. Stop it or change the port in `vite.config.js`.
 
 - **`npm install` fails**  
   Make sure your Node.js and npm versions meet the requirements listed above.
